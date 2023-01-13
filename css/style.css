@@ -144,6 +144,7 @@ body {
 .header-link {
   color: var(--link-def-color);
   font-weight: 600;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link.current {
   color: var(--accent-color);
@@ -162,6 +163,7 @@ body {
 .header-tel {
   color: var(--primary-text-color);
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-mail:hover,
@@ -208,6 +210,9 @@ body {
   line-height: 1.18;
   padding: 16px 32px;
   border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-hero:hover,
@@ -325,6 +330,8 @@ body {
   background-color: var(--icon-bg-color);
   border-radius: 50%;
   color: #f4f4fd;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icons {
@@ -394,8 +401,11 @@ body {
   border: 1px solid #8e8f99;
   border-radius: 4px;
 
-  color: #8e8f99;
+  /* color: #8e8f99; */
   fill: #8e8f99;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -442,10 +452,38 @@ body {
   margin-bottom: 0px;
 }
 
+.works-items > .link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .works-items > .link:hover,
 .works-items > .link:focus {
   display: block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.works-cover-text {
+  position: absolute;
+  top: 0;
+  padding: 40px 32px 164px 32px;
+
+  height: 100%;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+}
+
+.works-cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-items:hover .works-cover-text {
+  transform: translateY(0);
 }
 
 .works-content {
@@ -472,6 +510,11 @@ body {
 
   border: 1px solid #e7e9fc;
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.button-portfolio:hover,
@@ -547,6 +590,8 @@ body {
   align-items: center;
 
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-icon {
