@@ -545,8 +545,7 @@ body {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.button-portfolio:hover,
@@ -556,7 +555,6 @@ body {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 /* --------FOOTER------ */
@@ -677,6 +675,10 @@ body {
   right: 24px;
   top: 24px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 24px;
   height: 24px;
 
@@ -689,10 +691,4 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.modal-icon {
-  display: flex;
-  justify-items: center;
-  align-items: center;
 }
